@@ -4,6 +4,14 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+
+
+
+
+
+
+
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -20,12 +28,13 @@ int main() {
        printf("1 - BISPO\n");
        printf("2 - TORRE\n");
        printf("3 - RAINHA\n");
+       printf("4 - CAVALO\n");
        printf("0 - SAIR\n");
 
 printf("Digite:\n");
        scanf("%d", &opcao);
     
-    if ((opcao < 0) || (opcao > 3))
+    if ((opcao < 0) || (opcao > 4))
     {
         printf("Opcao invalida...");
         continue;
@@ -50,19 +59,18 @@ printf("Digite:\n");
 
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-    if(opcao == 1){
+    if(opcao == 3){
     for (int i = 0; i <= 8; i++){
-          printf("%s\n", BISPO);
+          printf("%s\n", RAINHA);
 
     }continue;}
-} while (opcao!=0);
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    if (opcao == 4)  // Verifica se a opção escolhida é o Cavalo
+    {
     for ( int i = 0; i == 0; i++){
-        
-
         for (int j = 0; j <= 4; j++ )
         { 
             printf("%s\n", CAVALO);
@@ -70,9 +78,12 @@ printf("Digite:\n");
             
         }
     printf("ESQUERDA ");
-    printf("ESQUERDA(CAVALO)");
+    printf("ESQUERDA(CAVALO)\n");
     
-    }
+    }}
+} while (opcao!=0);
+
+    
     
 
 
